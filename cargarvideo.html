@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<!-- Práctica de File API de Arantxa Unzueta -->
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .showhide {
+            display: none;
+        }
+
+        #botonera {
+            text-align: center;
+        }
+        
+        button {
+        width:150px;
+        height: 40px;
+        padding: 10px;
+        color: white;
+        font-weight: bold ;
+        background-color: gray;
+        border-radius: 7px;
+        border:1px outset;
+    }
+    </style>
+    <script src="videoload.js"></script>
+</head>
+
+<body>
+    <h3>Carga de ficheros</h3>
+    <div id="zonaInput">
+    <input type="file" id="miarchivo" name="files[]" onchange="manejarTipoArchivo(event)" /><br>
+    </div>
+    <div id="zonaVideo">
+    </div>
+    <div id="botonera" class="showhide">
+        <button onclick="document.getElementById('miVideo').play();">Reproducir</button>
+        <button onclick="document.getElementById('miVideo').pause();">Pausa</button>
+        <button onclick="document.getElementById('miVideo').volume += 0.1;">Subir Volumen</button>
+        <button onclick="document.getElementById('miVideo').volume -= 0.1;">Bajar Volumen</button>
+    </div>
+</body>
+
+</html>
